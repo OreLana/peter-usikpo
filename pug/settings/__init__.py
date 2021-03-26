@@ -5,4 +5,6 @@ if ENVIRONMENT == 'development':
     from .dev import *
 elif ENVIRONMENT == 'production':
     from .production import *
+elif ENVIRONMENT == 'testing':
+    from .testing import *
 
