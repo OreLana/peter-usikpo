@@ -43,6 +43,7 @@ jobs:
     - name: Run Tests
       env:
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
+        ENVIRONMENT: ${{ secrets.ENVIRONMENT }}
       run: |
-        python manage.py test --settings=pug.settings.testing
+        python manage.py test 
 
