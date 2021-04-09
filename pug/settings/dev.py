@@ -5,7 +5,7 @@ SECRET_KEY = config('SECRET_KEY')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'authdb',
+        'NAME': 'pugdb',
         'USER': config('USER'),
         'PASSWORD': config('PASSWORD'),
     }
