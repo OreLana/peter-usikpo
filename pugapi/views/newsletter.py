@@ -12,5 +12,11 @@ class AllNewsletterView(APIView):
         serializer = NewsletterSerializer(newsletters, many=True)
         return Response(serializer.data)
         
+class DetaillNewsletterView(APIView):
 
+    def get(self, request, id):
+        """Returns a newsletter with the id passed"""
+        newsletter = Newsletter.objects.filter(pk=id)
+        serializer = NewsletterSerializer(newsletter)
+        return Response(serializer.data)
 
